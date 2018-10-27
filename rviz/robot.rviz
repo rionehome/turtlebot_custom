@@ -324,7 +324,7 @@ Visualization Manager:
             Z: 0
           Topic: /move_base/DWAPlannerROS/local_plan
           Value: true
-      Enabled: false
+      Enabled: true
       Name: Navigation
   Enabled: true
   Global Options:
