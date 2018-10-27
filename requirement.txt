@@ -1,0 +1,5 @@
+
+ydlidarのパッケージが不足している場合は以下を実行で取ってくる
+
+$ git clone https://github.com/EAIBOT/ydlidar.git
+
