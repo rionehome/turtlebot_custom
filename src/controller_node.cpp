@@ -8,7 +8,6 @@
 
       private: void calcController(const sensor_msgs::Joy::ConstPtr& joy);
 
-      ros::NodeHandle nh;
       int stick_vertical_L;
       int stick_horizontal_L;
       int stick_vertical_R;
@@ -27,7 +26,7 @@
       double horizontalAccel;
       double angularAccel;
 
-
+      ros::NodeHandle nh;
       ros::Publisher publisher;
       ros::Subscriber subscriber;
       geometry_msgs::Twist velocity;
@@ -59,24 +58,25 @@
 
   void ControrerOpetation::calcController(const sensor_msgs::Joy::ConstPtr& joy){
     double accel=(double)(joy->buttons[button_Circle])/2+1;
+    
     double inputX=accel*verticalAccel*joy->axes[stick_vertical_L]
                   +accel*verticalAccel*joy->axes[stick_vertical_R]
                   +accel*verticalAccel*joy->axes[cross_vertical];
 
     double inputZ=accel*angularAccel*((joy->axes[button_R2]-1)/2)
                   -accel*angularAccel*((joy->axes[button_L2]-1)/2);
+
     if(inputX!=0||inputZ!=0){
       velocity.linear.x=inputX;
       velocity.angular.z=inputZ;
-      ROS_INFO("%f::%f",inputX,inputZ);
+      ROS_INFO("%f : %f",inputX,inputZ);
       publisher.publish(velocity);
     }
   }
 
-  int main(int argc, char **argv)
-  {
+  int main(int argc, char **argv) {
     ROS_INFO("Start Controller_node !!");
-    ros::init(argc, argv, "sample_controller_publisher");
+    ros::init(argc, argv, "controller_node");
     ControrerOpetation controrerOpetation;
     ros::spin();
   }
