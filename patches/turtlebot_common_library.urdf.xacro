@@ -9,7 +9,7 @@
 
   <!--実機用-->
   <joint name="laser_joint" type="fixed">
-    <origin xyz="0.1 0.0 0.3" rpy="0 0 3.14" />
+    <origin xyz="0.1 0.0 0.3" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="laser_frame" />
   </joint>
