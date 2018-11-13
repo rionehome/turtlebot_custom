@@ -7,7 +7,7 @@
   <xacro:include filename="$(find turtlebot_description)/urdf/common_properties.urdf.xacro"/>
   <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_properties.urdf.xacro"/>
 
-  <!--実機用-->
+  <!--Robot-->
   <joint name="laser_joint" type="fixed">
     <origin xyz="0.1 0.0 0.3" rpy="0 0 0" />
     <parent link="base_link" />
@@ -30,8 +30,7 @@
     </inertial>
   </link>
 
-  <!--Gazebo用-->
-  <!--Gazeboではgeometryのboxがあると何故かエラーを吐くため-->
+  <!--Gazebo-->
   <!--joint name="laser_frame" type="fixed">
     <origin xyz="0.1 0.0 0.35" rpy="0 0 0" />
     <parent link="base_link" />
