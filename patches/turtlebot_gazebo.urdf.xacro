@@ -37,7 +37,7 @@
           <pointCloudCutoff>0.4</pointCloudCutoff>
         </plugin>
       </sensor>
-      <!--GazebooのLidar-->
+      <!--Gazebo-Lidar-->
       <sensor type="gpu_ray" name="head_hokuyo_sensor">
       <pose>1 1 1 0 0 0</pose>
       <visualize>false</visualize>
