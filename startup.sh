@@ -7,8 +7,8 @@ if [ $? -ne 0 ]; then
   git clone https://github.com/EAIBOT/ydlidar
   cd $(rospack find ydlidar)/startup
   sudo chmod 777 ./*
-  sudo sh initenv.sh
+  sudo bash initenv.sh
   echo -e "\n complete setup ydlidar \n"
 fi
 
-bash patches/copy.sh
+#bash patches/copy.sh
