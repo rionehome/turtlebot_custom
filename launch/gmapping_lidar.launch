@@ -1,9 +1,9 @@
 <launch>
 
   <!-- Gmapping -->
-  <include file="$(find turtlebot_custom)/launch/includes/ydlidar_gmapping.launch.xml"/>
+  <include file="$(find turtlebot_custom)/launch/includes/gmapping/ydlidar_gmapping.launch.xml"/>
 
   <!-- Move base -->
-  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+  <include file="$(find turtlebot_custom)/launch/includes/move_base/move_base.launch.xml"/>
   
 </launch>
