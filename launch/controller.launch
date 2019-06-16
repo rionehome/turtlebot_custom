@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="controller_node"  pkg="turtlebot_custom"  type="controller_node" output="screen">
+  </node>
+
+</launch>
+
